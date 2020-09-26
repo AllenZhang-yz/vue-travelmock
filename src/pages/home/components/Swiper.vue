@@ -10,12 +10,14 @@
 </template>
 
 <script>
+import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
 export default {
   name: 'HomeSwiper',
+  components: { Swiper, SwiperSlide },
   data() {
     return {
       swiperOptions: {
-        pagination: { el: '.swiper-pagination' },
+        pagination: { el: '.swiper-pagination', dynamicBullets: true },
         loop: true
       },
       swiperList: [
