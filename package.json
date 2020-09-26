@@ -14,6 +14,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.30",
     "@fortawesome/free-solid-svg-icons": "^5.14.0",
     "@fortawesome/vue-fontawesome": "2",
+    "axios": "^0.20.0",
     "stylus": "^0.54.8",
     "stylus-loader": "^3.0.2",
     "swiper": "^6.3.1",

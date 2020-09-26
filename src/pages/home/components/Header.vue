@@ -6,7 +6,8 @@
       or tourist attractions
     </div>
     <div class="header-right">
-      City<span class="caret">
+      {{ this.city
+      }}<span class="caret">
         <font-awesome-icon icon="caret-down" />
       </span>
     </div>
@@ -15,7 +16,10 @@
 
 <script>
 export default {
-  name: 'HomeHeader'
+  name: 'HomeHeader',
+  props: {
+    city: String
+  }
 }
 </script>
 
