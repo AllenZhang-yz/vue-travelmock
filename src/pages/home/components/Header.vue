@@ -5,12 +5,14 @@
       <span class="search"><font-awesome-icon icon="search"/></span>Enter cities
       or tourist attractions
     </div>
-    <div class="header-right">
-      {{ this.city
-      }}<span class="caret">
-        <font-awesome-icon icon="caret-down" />
-      </span>
-    </div>
+    <router-link to="/city">
+      <div class="header-right">
+        {{ this.city
+        }}<span class="caret">
+          <font-awesome-icon icon="caret-down" />
+        </span>
+      </div>
+    </router-link>
   </div>
 </template>
 
@@ -26,7 +28,7 @@ export default {
 <style lang="stylus" scoped>
 @import '~styles/varibles.styl';
 .header {
-  line-height: 0.86rem;
+  line-height: $headerHeight;
   display: flex;
   background: $bgColor;
   color: #fff;
@@ -57,6 +59,7 @@ export default {
     width: 1.24rem;
     float: right;
     text-align: center;
+    color #fff
     .caret {
       font-size .4rem
       margin-left .1rem
