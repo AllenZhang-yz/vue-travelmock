@@ -4,14 +4,14 @@
       <div class="area">
         <div class="title border-topbottom">Current City</div>
         <div class="button-list">
-          <div class="button-wrapper"><div class="button">北京</div></div>
+          <div class="button-wrapper"><div class="button">Beijing</div></div>
         </div>
       </div>
       <div class="area">
         <div class="title border-topbottom">Popular Cities</div>
         <div class="button-list">
           <div class="button-wrapper" v-for="item of hot" :key="item.id">
-            <div class="button">{{ item.name }}</div>
+            <div class="button">{{ item.spell }}</div>
           </div>
         </div>
       </div>
@@ -19,7 +19,7 @@
         <div class="title border-topbottom">{{ key }}</div>
         <div class="item-list">
           <div class="item border-bottom" v-for="city of item" :key="city.id">
-            {{ city.name }}
+            {{ city.spell }}
           </div>
         </div>
       </div>

@@ -39,6 +39,16 @@ export default {
       res = res.data
       if (res.ret && res.data) {
         const data = res.data
+        for (let index in data.cities) {
+          data.cities[index].forEach(value => {
+            value.spell =
+              value.spell.charAt(0).toUpperCase() + value.spell.slice(1)
+          })
+        }
+        data.hotCities.forEach(value => {
+          value.spell =
+            value.spell.charAt(0).toUpperCase() + value.spell.slice(1)
+        })
         this.cities = data.cities
         this.hotCities = data.hotCities
       }
