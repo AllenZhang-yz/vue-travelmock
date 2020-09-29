@@ -7,8 +7,10 @@
     </div>
     <router-link to="/city">
       <div class="header-right">
-        {{ this.city
-        }}<span class="caret">
+        <span class="city">
+          {{ this.city }}
+        </span>
+        <span class="caret">
           <font-awesome-icon icon="caret-down" />
         </span>
       </div>
@@ -17,16 +19,18 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
   name: 'HomeHeader',
-  props: {
-    city: String
+  computed: {
+    ...mapState(['city'])
   }
 }
 </script>
 
 <style lang="stylus" scoped>
-@import '~styles/varibles.styl';
+@import '~styles/varibles.styl'
+@import '~styles/mixins.styl'
 .header {
   line-height: $headerHeight;
   display: flex;
@@ -56,7 +60,9 @@ export default {
   }
 
   .header-right {
-    width: 1.24rem;
+    display flex
+    min-width: 1.04rem;
+    padding 0 .1rem
     float: right;
     text-align: center;
     color #fff
