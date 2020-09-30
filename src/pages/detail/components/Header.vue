@@ -1,16 +1,14 @@
 <template>
   <div>
-    <router-link
-      tag="div"
-      to="/"
-      class="header-abs"
-      v-show="showAbs"
-      :style="opacityStyle"
-    >
+    <router-link tag="div" to="/" class="header-abs" v-show="showAbs">
       <font-awesome-icon icon="chevron-left" class="header-abs-back" />
     </router-link>
     <div class="header-fixed" v-show="!showAbs">
-      <font-awesome-icon icon="chevron-left" class="header-fixed-back" />Details
+      <font-awesome-icon
+        icon="chevron-left"
+        class="header-fixed-back"
+        :style="opacityStyle"
+      />Details
     </div>
   </div>
 </template>
