@@ -4,7 +4,8 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import {
   faChevronLeft,
   faSearch,
-  faCaretDown
+  faCaretDown,
+  faImages
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
@@ -14,7 +15,7 @@ import store from './store'
 import 'styles/reset.css'
 import 'styles/border.css'
 
-library.add(faChevronLeft, faSearch, faCaretDown)
+library.add(faChevronLeft, faSearch, faCaretDown, faImages)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
